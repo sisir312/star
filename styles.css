@@ -1,0 +1,95 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-color: #0f60da;
+    background-position: center;
+}
+
+header {
+
+    background-image: url('n1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    width: 100%;
+    /* Fancy Five Star NGO logo */
+}
+
+header::before {
+    content: "★★★★★";
+    display: block;
+    font-size: 2.5rem;
+    color: gold;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.3em;
+    text-shadow: 2px 2px 8px #333;
+}
+
+header h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-shadow: 1px 1px 6px #0f60da;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin: 0.2em 0 0 0;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+background-size: cover;
+background-position: center;
+color: rgb(216, 111, 12);
+padding: 10px 0;
+text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.key-spheres,
+.mission,
+.sdgs,
+.plantation-model,
+.stakeholders,
+.success-stories {
+    padding: 20px;
+}
+
+.spheres,
+.sdg-icons,
+.stories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sphere,
+.sdg,
+.story {
+    border: 1px solid #ce1212;
+    margin: 10px;
+    padding: 10px;
+    flex: 1 1 30%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
