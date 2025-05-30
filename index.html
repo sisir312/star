@@ -10,43 +10,112 @@
 
 <body>
     <header>
-        <h1>FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
+        <h1 class="gradient-text">FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
+        <style>
+            .gradient-text {
+                background: linear-gradient(270deg, #ff00cc, #3333ff, #00ff99, #ffcc00, #ff00cc);
+                background-size: 1000% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                animation: gradientMove 5s linear infinite;
+                font-size: 2.5em;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+                margin: 0.5em 0;
+            }
+
+            @keyframes gradientMove {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
+        </style>
         <nav>
             <ul>
-                <li><a href="index2.html"color: #6105bd;">Home</a></li>
-                <li><a href="index3.html"color: #5208c1;">About Us</a></li>
-                <li><a href="#" style="color: #2200ff;">Our Work</a></li>
-                <li><a href="#" style="color: #6600ff;">Contact</a></li>
-                <li><a href="#" style="color: #4400ff;">Donate</a></li>
-                <link rel="stylesheet" href="style.css">
+                <li><a href="index2.html" class="nav-btn">Home</a></li>
+                <li><a href="index3.html" class="nav-btn">About Us</a></li>
+                <li><a href="#" class="nav-btn">Our Work</a></li>
+                <li><a href="#" class="nav-btn">Contact</a></li>
+                <li><a href="#" class="nav-btn">Donate</a></li>
             </ul>
+            <style>
+                .nav-btn {
+                    font-weight: bold;
+                    color: #fff;
+                    background: linear-gradient(90deg, #2d0036 0%, #6105bd 100%);
+                    padding: 10px 22px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    margin: 0 8px;
+                    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 2px 8px rgba(97, 5, 189, 0.15);
+                    display: inline-block;
+                }
+
+                .nav-btn:hover {
+                    background: linear-gradient(90deg, #6105bd 0%, #2d0036 100%);
+                    color: #ffd700;
+                    box-shadow: 0 4px 16px rgba(97, 5, 189, 0.25);
+                }
+
+                nav ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    gap: 10px;
+                }
+
+                nav li {
+                    display: inline-block;
+                }
+            </style>
         </nav>
     </header>
     <section class="key-spheres">
-        <h2>Our Key Spheres</h2>
+
         <div class="spheres">
-            <div class="sphere">Sphere 1</div>
-            <div class="sphere">Sphere 2</div>
-            <div class="sphere">Sphere 3</div>
-            <div class="sphere">Sphere 4</div>
-            <div class="sphere">Sphere 5</div>
-            <div class="sphere">Sphere 6</div>
+
+            <div class="sphere">
+                <strong style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-size: 1.3em;">
+                    Supporting Lower Class Tribal Communities
+                </strong><br>
+                <span style="font-family: 'Segoe Script', cursive; color: #222;">
+                    Our NGO is dedicated to uplifting lower class tribal populations by addressing their unique
+                    challenges. We provide essential resources such as education, healthcare, and skill development
+                    programs tailored to their needs. Through advocacy and direct support, we strive to ensure equal
+                    opportunities, preserve cultural heritage, and foster sustainable growth within these communities.
+                </span>
+            </div>
         </div>
+
     </section>
     <section class="mission">
-        <h2>Our Mission</h2>
-        <p>We are committed to improving the lives of the tribal community.</p>
+        <h2 style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-weight: bold; font-size: 2em;">
+            Our Mission
+        </h2>
+        <p style="font-family: 'Segoe Script', cursive; color: #6105bd; font-weight: bold; font-size: 1.3em;">
+            We are committed to improving the lives of the tribal community.
+        </p>
     </section>
     <section class="sdgs">
         <h2>Our Focused SDGs</h2>
         <div class="sdg-icons">
-            <div class="sdg">SDG 1</div>
-            <div class="sdg">SDG 2</div>
-            <div class="sdg">SDG 3</div>
-            <div class="sdg">SDG 4</div>
-            <div class="sdg">SDG 5</div>
-            <div class="sdg">SDG 6</div>
-        </div>
+            <div class="sdg"
+                style="font-family: 'Segoe Script', cursive; color: #1a0033; font-size: 1.2em; background: #f3eaff; border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(26,0,51,0.08);">
+                <strong>: No Poverty</strong><br>
+                <span>
+                    We work to help tribal families overcome poverty by giving them education, skills, and support. Our
+                    goal is to make sure every family has enough to live a better life.
+                </span>
+            </div>
     </section>
     <section class="plantation-model">
         <h2>Our Plantation Model</h2>
@@ -57,17 +126,25 @@
     <section class="stakeholders">
         <h2>Our Stakeholders</h2>
         <div class="stakeholder-logos">
-            <img src="n2.jpg" alt="Smiling representative from a partner organization standing in front of a banner with the text FIVE STAR SOCIAL WELFARE FOUNDATION, bright and welcoming atmosphere" width="350" height="300">
-            <img src="stakeholder2.png" alt="Logo of a supporting stakeholder organization, simple and professional design, displayed on a white background" width="150" height="100">
+            <img src="n2.jpg"
+                alt="Smiling representative from a partner organization standing in front of a banner with the text FIVE STAR SOCIAL WELFARE FOUNDATION, bright and welcoming atmosphere"
+                width="350" height="300">
+            <img src="stakeholder2.png"
+                alt="Logo of a supporting stakeholder organization, simple and professional design, displayed on a white background"
+                width="150" height="100">
         </div>
     </section>
     <section class="success-stories">
         <h2>Success Stories</h2>
         <div class="stories">
-            <div class="story">Story 1</div>
-            <div class="story">Story 2</div>
-            <div class="story">Story 3</div>
-        </div>
+            <div class="story"
+                style="font-family: 'Segoe Script', cursive; color: #2d0036; font-size: 1.2em; background: #f3eaff; border-radius: 12px; padding: 14px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(45,0,54,0.10);">
+                <strong>Empowering Tribal Youth</strong><br>
+                Five Star Social Welfare Foundation helped a group of tribal youth complete their education and learn
+                new skills. With our support, they started small businesses and now support their families. Their
+                success inspires others in the community to dream big and work for a brighter future.
+            </div>
+
     </section>
     <footer>
         <p>&copy; FIVE STAR SOCIAL WELFARE FOUNDATION</p>
