@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg%3E%3Cpolygon points='32,6 38.09,24.26 57,24.26 41.18,36.74 47.27,55 32,42.52 16.73,55 22.82,36.74 7,24.26 25.91,24.26' fill='%23ffcc00' stroke='%232d0036' stroke-width='2'/%3E%3Cpolygon points='16,12 18.5,19.5 26.5,19.5 20,24.5 22.5,32 16,27 9.5,32 12,24.5 5.5,19.5 13.5,19.5' fill='%23ffcc00' stroke='%232d0036' stroke-width='1'/%3E%3Cpolygon points='48,12 50.5,19.5 58.5,19.5 52,24.5 54.5,32 48,27 41.5,32 44,24.5 37.5,19.5 45.5,19.5' fill='%23ffcc00' stroke='%232d0036' stroke-width='1'/%3E%3Cpolygon points='24,40 25.5,44.5 30.5,44.5 26.5,47.5 28,52 24,49 20,52 21.5,47.5 17.5,44.5 22.5,44.5' fill='%23ffcc00' stroke='%232d0036' stroke-width='1'/%3E%3Cpolygon points='40,40 41.5,44.5 46.5,44.5 42.5,47.5 44,52 40,49 36,52 37.5,47.5 33.5,44.5 38.5,44.5' fill='%23ffcc00' stroke='%232d0036' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIVE STAR SOCIAL WELFARE FOUNDATION</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+            <h1 class="gradient-text blinking-text pop-effect special-effect">
+                FIVE STAR SOCIAL WELFARE FOUNDATION
+            </h1>
+            <style>
+                .pop-effect {
+                    animation: popUpDown 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
+                }
+                @keyframes popUpDown {
+                    0% {
+                        transform: translateY(0) scale(1);
+                        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ffcc00;
+                    }
+                    30% {
+                        transform: translateY(-18px) scale(1.08);
+                        text-shadow: 0 0 24px #00ff99, 0 0 40px #3333ff;
+                    }
+                    60% {
+                        transform: translateY(8px) scale(0.96);
+                        text-shadow: 0 0 18px #ffcc00, 0 0 30px #ff00cc;
+                    }
+                    100% {
+                        transform: translateY(0) scale(1);
+                        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ffcc00;
+                    }
+                }
+                .special-effect {
+                    filter: drop-shadow(0 0 12px #ff00cc) drop-shadow(0 0 24px #ffcc00);
+                    position: relative;
+                }
+                .special-effect::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    transform: translateX(-50%);
+                    width: 120px;
+                    height: 18px;
+                    background: radial-gradient(ellipse at center, #ffcc00 0%, #ff00cc 60%, transparent 100%);
+                    opacity: 0.7;
+                    filter: blur(4px);
+                    pointer-events: none;
+                    animation: glowPulse 2s infinite alternate;
+                }
+                @keyframes glowPulse {
+                    0% { opacity: 0.7; }
+                    100% { opacity: 0.3; }
+                }
+            </style></h1>
+            <style>
+                .gradient-text {
+                    background: linear-gradient(270deg, #2d0036, #6105bd, #222, #000, #2d0036);
+                    background-size: 1000% 100%;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    color: transparent;
+                    animation: gradientMove 5s linear infinite;
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    margin: 0.5em 0;
+                }
+
+                @keyframes gradientMove {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    100% {
+                        background-position: 100% 50%;
+                    }
+                }
+
+                .blinking-text {
+                    animation: gradientMove 5s linear infinite, blinkText 1s steps(2, start) infinite;
+                }
+
+                @keyframes blinkText {
+
+                    0%,
+                    100% {
+                        opacity: 1;
+                    }
+
+                    50% {
+                        opacity: 0.4;
+                    }
+                }
+            </style>
+            <div style="position: relative; margin-left: auto;">
+                <span class="blinking-lights"></span>
+                <a href="#" class="donate-btn" style="position: relative; z-index: 1;">Donate</a>
+            </div>
+            <style>
+                .blinking-lights {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 90px;
+                    height: 90px;
+                    pointer-events: none;
+                    transform: translate(-50%, -50%);
+                    z-index: 0;
+                }
+
+                .blinking-lights::before,
+                .blinking-lights::after {
+                    content: '';
+                    position: absolute;
+                    border-radius: 50%;
+                    opacity: 0.7;
+                    animation: blink 1.2s infinite alternate;
+                }
+
+                .blinking-lights::before {
+                    width: 90px;
+                    height: 90px;
+                    background: radial-gradient(circle, #ff00cc 40%, transparent 70%);
+                    left: 0;
+                    top: 0;
+                    animation-delay: 0s;
+                }
+
+                .blinking-lights::after {
+                    width: 60px;
+                    height: 60px;
+                    background: radial-gradient(circle, #ffcc00 40%, transparent 70%);
+                    left: 15px;
+                    top: 15px;
+                    animation-delay: 0.6s;
+                }
+
+                @keyframes blink {
+                    0% {
+                        opacity: 0.7;
+                        transform: scale(1);
+                    }
+
+                    100% {
+                        opacity: 0.2;
+                        transform: scale(1.2);
+                    }
+                }
+            </style>
+        </div>
+        <style>
+            .donate-btn {
+                font-weight: bold;
+                color: #fff;
+                background: linear-gradient(90deg, #ff00cc 0%, #ffcc00 100%);
+                padding: 10px 28px;
+                border-radius: 30px;
+                text-decoration: none;
+                margin-left: 24px;
+                transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+                box-shadow: 0 2px 8px rgba(255, 0, 204, 0.15);
+                display: inline-block;
+                font-size: 1.1em;
+            }
+
+            .donate-btn:hover {
+                background: linear-gradient(90deg, #ffcc00 0%, #ff00cc 100%);
+                color: #2d0036;
+                box-shadow: 0 4px 16px rgba(255, 0, 204, 0.25);
+            }
+        </style>
+        <style>
+            d .graient-text {
+                background: linear-gradient(270deg, #ff00cc, #3333ff, #00ff99, #ffcc00, #ff00cc);
+                background-size: 1000% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                animation: gradientMove 5s linear infinite;
+                font-size: 2.5em;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+                margin: 0.5em 0;
+            }
+
+            @keyframes gradientMove {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
+        </style>
+        <nav>
+            <ul>
+                <li><a href="index2.html" class="nav-btn">Home</a></li>
+                <li><a href="index3.html" class="nav-btn">About Us</a></li>
+                <li><a href="index4.html" class="nav-btn">Our Work</a></li>
+                <li><a href="#" class="nav-btn">Contact</a></li>
+            </ul>
+            </ul>
+            <style>
+                .nav-btn {
+                    font-weight: bold;
+                    color: #fff;
+                    background: linear-gradient(90deg, #2d0036 0%, #6105bd 100%);
+                    padding: 10px 22px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    margin: 0 8px;
+                    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 2px 8px rgba(97, 5, 189, 0.15);
+                    display: inline-block;
+                }
+
+                .nav-btn:hover {
+                    background: linear-gradient(90deg, #6105bd 0%, #2d0036 100%);
+                    color: #ffd700;
+                    box-shadow: 0 4px 16px rgba(97, 5, 189, 0.25);
+                }
+
+                nav ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    gap: 10px;
+                }
+
+                nav li {
+                    display: inline-block;
+                }
+            </style>
+        </nav>
+    </header>
+    <section class="key-spheres">
+
+        <div class="spheres">
+
+            <div class="sphere">
+                <strong style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-size: 1.3em;">
+                    <span style="
+                        display: inline-block;
+                        font-family: 'Brush Script MT', cursive;
+                        font-size: 1.3em;
+                        font-weight: bold;
+                        background: linear-gradient(90deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+                        background-size: 400% 100%;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        color: transparent;
+                        animation: runningLight 3s linear infinite;
+                        letter-spacing: 1px;
+                    ">
+                        Supporting Lower Class Tribal Communities
+                    </span>
+                    <style>
+                    @keyframes runningLight {
+                        0% { background-position: 0% 50%; }
+                        100% { background-position: 100% 50%; }
+                    }
+                    </style>
+                </strong><br>
+                <span style="font-family: 'Segoe Script', cursive; color: #222;">
+                    Our NGO is dedicated to uplifting lower class tribal populations by addressing their unique
+                    challenges. We provide essential resources such as education, healthcare, and skill development
+                    programs tailored to their needs. Through advocacy and direct support, we strive to ensure equal
+                    opportunities, preserve cultural heritage, and foster sustainable growth within these communities.
+                </span>
+            </div>
+        </div>
+
+    </section>
+    <section class="mission">
+        <h2 style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-weight: bold; font-size: 2em;">
+            <span style="
+                display: inline-block;
+                font-family: 'Brush Script MT', cursive;
+                font-size: 1em;
+                font-weight: bold;
+                background: linear-gradient(90deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+                background-size: 400% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                animation: runningLight 3s linear infinite;
+                letter-spacing: 1px;
+            ">
+                Our Mission
+            </span>
+            <style>
+            @keyframes runningLight {
+                0% { background-position: 0% 50%; }
+                100% { background-position: 100% 50%; }
+            }
+            </style>
+        
+    </section>
+    <section class="sdgs">
+       
+        <div class="sdg-icons">
+            <div class="sdg"
+                style="font-family: 'Segoe Script', cursive; color: #1a0033; font-size: 1.2em; background: #f3eaff; border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(26,0,51,0.08);">
+                <strong>: No Poverty</strong><br>
+                <span>
+                    We work to help tribal families overcome poverty by giving them education, skills, and support. Our
+                    goal is to make sure every family has enough to live a better life.
+                </span>
+            </div>
+    </section>
+    <section class="plantation-model">
+        <h2 style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-size: 2em; font-weight: bold;">Our
+            Plantation Model</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin-top: 16px;">
+            <div style="flex: 1 1 320px; min-width: 280px;">
+                <p style="font-family: 'Segoe Script', cursive; color: #6105bd; font-size: 1.2em; line-height: 1.7;">
+                    Our NGO’s plantation model focuses on creating green, sustainable environments in tribal and rural
+                    areas.<br>
+                    <span style="font-family: 'Brush Script MT', cursive; color: #2d0036; font-size: 1.1em;">
+                        We organize community drives, educate villagers on the importance of trees, and involve local
+                        youth in every step.<br>
+                        Each sapling is cared for like family, ensuring survival and growth.<br>
+                        Together, we plant hope for a greener tomorrow!
+                    </span>
+                </p>
+                <ul style="font-family: 'Segoe Script', cursive; color: #222; font-size: 1.1em; margin-top: 10px;">
+                    <li>🌱 Community participation in every plantation drive</li>
+                    <li>🌳 Focus on native and fruit-bearing species</li>
+                    <li>💧 Regular care and watering schedules</li>
+                    <li>📚 Awareness workshops for sustainable impact</li>
+                </ul>
+            </div>
+            <div style="flex: 1 1 260px; min-width: 220px; display: flex; flex-direction: column; gap: 12px;">
+                <img src="n4.jpg"
+                    alt="Volunteers planting saplings together, smiling and working as a team, lush green background"
+                    style="border-radius: 14px; box-shadow: 0 2px 8px rgba(45,0,54,0.10); width: 100%; max-width: 320px;">
+                <img src="n5.png"
+                    alt="Close-up of hands gently placing a young plant in the soil, fine hand writing style caption overlay: 'Planting Hope'"
+                    style="border-radius: 14px; box-shadow: 0 2px 8px rgba(45,0,54,0.10); width: 100%; max-width: 320px;">
+            </div>
+        </div>
+        <div class="model">
+            <p>Details about the plantation model.</p>
+        </div>
+    </section>
+    <section class="stakeholders">
+        <h2 style="
+            font-family: 'Brush Script MT', cursive;
+            font-weight: bold;
+            font-size: 2em;
+            background: linear-gradient(90deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: runningLight 3s linear infinite;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 0.5em;
+        ">
+            Our Stakeholders
+        </h2>
+        <style>
+        @keyframes runningLight {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        </style>
+        <div class="stakeholder-logos">
+            <div class="stakeholder-slider"
+                style="display: inline-block; vertical-align: middle; width: 350px; height: 300px; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 2px 8px rgba(45,0,54,0.10);">
+                <img id="stakeholder-slide" src="n6.jpg" alt="Stakeholder image" width="350" height="300"
+                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.7s;">
+            </div>
+            <script>
+                const stakeholderImages = [
+                    "n6.jpg", "n7.jpg", "n8.jpg", "n9.jpg", "n10.jpg", "n11.jpg", "n12.jpg", "n13.jpg", "n14.jpg"
+                ];
+                let stakeholderIndex = 0;
+                const slideImg = document.getElementById('stakeholder-slide');
+                setInterval(() => {
+                    slideImg.style.opacity = 0;
+                    setTimeout(() => {
+                        stakeholderIndex = (stakeholderIndex + 1) % stakeholderImages.length;
+                        slideImg.src = stakeholderImages[stakeholderIndex];
+                        slideImg.style.opacity = 1;
+                    }, 700);
+                }, 2500);
+            </script>
+
+        </div>
+    </section>
+    <section class="success-stories">
+        <h2 class="success-heading">Success Stories</h2>
+        <style>
+            .success-heading {
+                font-family: 'Brush Script MT', cursive;
+                font-weight: bold;
+                font-size: 2.2em;
+                background: linear-gradient(90deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+                background-size: 400% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                animation: runningLight 3s linear infinite;
+                letter-spacing: 2px;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+
+            @keyframes runningLight {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
+        </style>
+        <div class="stories">
+            <div class="story"
+                style="font-family: 'Segoe Script', cursive; color: #2d0036; font-size: 1.2em; background: #f3eaff; border-radius: 12px; padding: 14px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(45,0,54,0.10);">
+                <strong>Empowering Tribal Youth</strong><br>
+                Five Star Social Welfare Foundation helped a group of tribal youth complete their education and learn
+                new skills. With our support, they started small businesses and now support their families. Their
+                success inspires others in the community to dream big and work for a brighter future.
+            </div>
+
+    </section>
+    <footer>
+        <p>&copy; FIVE STAR SOCIAL WELFARE FOUNDATION</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

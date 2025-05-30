@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Five Star Social Welfare Foundation Odisha - Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            animation: bgTransition 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgTransition {
+            0% { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);}
+            50% { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);}
+            100% { background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);}
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.85);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: -80px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ffb347 0%, #ffcc33 100%);
+            opacity: 0.4;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite alternate;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #43cea2 0%, #185a9d 100%);
+            opacity: 0.3;
+            z-index: 0;
+            animation: float 8s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0);}
+            100% { transform: translateY(30px);}
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 8px #fff7;
+            z-index: 1;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            color: #185a9d;
+            margin-bottom: 30px;
+            font-weight: 400;
+            z-index: 1;
+            position: relative;
+        }
+
+        .contact-info {
+            z-index: 1;
+            position: relative;
+            background: rgba(255,255,255,0.7);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 12px 0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            font-size: 1.3rem;
+            color: #ff6f61;
+        }
+
+        .contact-form {
+            z-index: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ffb347;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+            background: #fff;
+            resize: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 2px solid #43cea2;
+        }
+
+        .contact-form button {
+            background: linear-gradient(90deg, #ffb347 0%, #43cea2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #ffb34755;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #43cea2 0%, #ffb347 100%);
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 20px 8px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Five Star Social Welfare Foundation</h1>
+        <h2>Odisha - Contact Us</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i>Jajpur Road,Jajpur, Odisha, 755019</p>
+            <p><i class="fas fa-phone"></i> +91 7008453921</p>
+            <p><i class="fas fa-envelope"></i> info@fivestarsocialwelfarefoundation.ngo</p>
+            <p><i class="fas fa-globe"></i> www.fivestarsocialwelfarefoundation.ngo</p>
+        </div>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
