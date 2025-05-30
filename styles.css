@@ -11,6 +11,9 @@ body {
 header {
 
     background-image: url('n1.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     background-position: cover;
     min-height: 300px;
