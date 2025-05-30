@@ -10,9 +10,101 @@
 
 <body>
     <header>
-        <h1 class="gradient-text">FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
-        <style>
+        <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
+            <h1 class="gradient-text blinking-text">FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
+            <style>
             .gradient-text {
+                background: linear-gradient(270deg, #2d0036, #6105bd, #222, #000, #2d0036);
+                background-size: 1000% 100%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                animation: gradientMove 5s linear infinite;
+                font-size: 2.5em;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-align: center;
+                margin: 0.5em 0;
+            }
+            @keyframes gradientMove {
+                0% { background-position: 0% 50%; }
+                100% { background-position: 100% 50%; }
+            }
+            .blinking-text {
+                animation: gradientMove 5s linear infinite, blinkText 1s steps(2, start) infinite;
+            }
+            @keyframes blinkText {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.4; }
+            }
+            </style>
+            <div style="position: relative; margin-left: auto;">
+            <span class="blinking-lights"></span>
+            <a href="#" class="donate-btn" style="position: relative; z-index: 1;">Donate</a>
+            </div>
+            <style>
+            .blinking-lights {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 90px;
+                height: 90px;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+            }
+            .blinking-lights::before, .blinking-lights::after {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.7;
+                animation: blink 1.2s infinite alternate;
+            }
+            .blinking-lights::before {
+                width: 90px;
+                height: 90px;
+                background: radial-gradient(circle, #ff00cc 40%, transparent 70%);
+                left: 0;
+                top: 0;
+                animation-delay: 0s;
+            }
+            .blinking-lights::after {
+                width: 60px;
+                height: 60px;
+                background: radial-gradient(circle, #ffcc00 40%, transparent 70%);
+                left: 15px;
+                top: 15px;
+                animation-delay: 0.6s;
+            }
+            @keyframes blink {
+                0% { opacity: 0.7; transform: scale(1);}
+                100% { opacity: 0.2; transform: scale(1.2);}
+            }
+            </style>
+        </div>
+        <style>
+            .donate-btn {
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #ff00cc 0%, #ffcc00 100%);
+            padding: 10px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-left: 24px;
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(255, 0, 204, 0.15);
+            display: inline-block;
+            font-size: 1.1em;
+            }
+            .donate-btn:hover {
+            background: linear-gradient(90deg, #ffcc00 0%, #ff00cc 100%);
+            color: #2d0036;
+            box-shadow: 0 4px 16px rgba(255, 0, 204, 0.25);
+            }
+        </style>
+        <style>
+         d   .graient-text {
                 background: linear-gradient(270deg, #ff00cc, #3333ff, #00ff99, #ffcc00, #ff00cc);
                 background-size: 1000% 100%;
                 -webkit-background-clip: text;
@@ -43,7 +135,7 @@
                 <li><a href="index3.html" class="nav-btn">About Us</a></li>
                 <li><a href="#" class="nav-btn">Our Work</a></li>
                 <li><a href="#" class="nav-btn">Contact</a></li>
-                <li><a href="#" class="nav-btn">Donate</a></li>
+            </ul>
             </ul>
             <style>
                 .nav-btn {
