@@ -20,28 +20,34 @@
                 .pop-effect {
                     animation: popUpDown 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate;
                 }
+
                 @keyframes popUpDown {
                     0% {
                         transform: translateY(0) scale(1);
                         text-shadow: 0 0 10px #ff00cc, 0 0 20px #ffcc00;
                     }
+
                     30% {
                         transform: translateY(-18px) scale(1.08);
                         text-shadow: 0 0 24px #00ff99, 0 0 40px #3333ff;
                     }
+
                     60% {
                         transform: translateY(8px) scale(0.96);
                         text-shadow: 0 0 18px #ffcc00, 0 0 30px #ff00cc;
                     }
+
                     100% {
                         transform: translateY(0) scale(1);
                         text-shadow: 0 0 10px #ff00cc, 0 0 20px #ffcc00;
                     }
                 }
+
                 .special-effect {
                     filter: drop-shadow(0 0 12px #ff00cc) drop-shadow(0 0 24px #ffcc00);
                     position: relative;
                 }
+
                 .special-effect::after {
                     content: '';
                     position: absolute;
@@ -56,11 +62,17 @@
                     pointer-events: none;
                     animation: glowPulse 2s infinite alternate;
                 }
+
                 @keyframes glowPulse {
-                    0% { opacity: 0.7; }
-                    100% { opacity: 0.3; }
+                    0% {
+                        opacity: 0.7;
+                    }
+
+                    100% {
+                        opacity: 0.3;
+                    }
                 }
-            </style></h1>
+            </style>
             <style>
                 .gradient-text {
                     background: linear-gradient(270deg, #2d0036, #6105bd, #222, #000, #2d0036);
@@ -160,6 +172,40 @@
             </style>
         </div>
         <style>
+            body {
+                animation: bgColorChange 15s linear infinite;
+                background-size: 400% 400%;
+                transition: background 1s;
+            }
+
+            @keyframes bgColorChange {
+                0% {
+                    background: linear-gradient(120deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+                    background-position: 0% 50%;
+                }
+
+                25% {
+                    background: linear-gradient(120deg, #ffcc00, #00ff99, #3333ff, #ff00cc, #ffcc00);
+                    background-position: 50% 100%;
+                }
+
+                50% {
+                    background: linear-gradient(120deg, #00ff99, #3333ff, #ff00cc, #ffcc00, #00ff99);
+                    background-position: 100% 50%;
+                }
+
+                75% {
+                    background: linear-gradient(120deg, #3333ff, #ff00cc, #ffcc00, #00ff99, #3333ff);
+                    background-position: 50% 0%;
+                }
+
+                100% {
+                    background: linear-gradient(120deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+        <style>
             .donate-btn {
                 font-weight: bold;
                 color: #fff;
@@ -172,6 +218,20 @@
                 box-shadow: 0 2px 8px rgba(255, 0, 204, 0.15);
                 display: inline-block;
                 font-size: 1.1em;
+            }
+
+            .donate-btn {
+                font-weight: bold;
+                color: #fff;
+                background: linear-gradient(90deg, #ff00cc 0%, #ffcc00 100%);
+                padding: 6px 16px;
+                border-radius: 30px;
+                text-decoration: none;
+                margin-left: 24px;
+                transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+                box-shadow: 0 2px 8px rgba(255, 0, 204, 0.15);
+                display: inline-block;
+                font-size: 0.95em;
             }
 
             .donate-btn:hover {
@@ -209,8 +269,10 @@
         <nav>
             <ul>
                 <li><a href="index2.html" class="nav-btn" style="padding: 6px 14px; font-size: 0.95em;">Home</a></li>
-                <li><a href="index3.html" class="nav-btn" style="padding: 5px 12px; font-size: 0.85em;">About Us</a></li>
-                <li><a href="index4.html" class="nav-btn" style="padding: 5px 12px; font-size: 0.85em;">Our Work</a></li>
+                <li><a href="index3.html" class="nav-btn" style="padding: 5px 12px; font-size: 0.85em;">About Us</a>
+                </li>
+                <li><a href="index4.html" class="nav-btn" style="padding: 5px 12px; font-size: 0.85em;">Our Work</a>
+                </li>
                 <li><a href="index5.html" class="nav-btn" style="padding: 5px 12px; font-size: 0.85em;">Contact</a></li>
             </ul>
             </ul>
@@ -271,10 +333,15 @@
                         Supporting Lower Class Tribal Communities
                     </span>
                     <style>
-                    @keyframes runningLight {
-                        0% { background-position: 0% 50%; }
-                        100% { background-position: 100% 50%; }
-                    }
+                        @keyframes runningLight {
+                            0% {
+                                background-position: 0% 50%;
+                            }
+
+                            100% {
+                                background-position: 100% 50%;
+                            }
+                        }
                     </style>
                 </strong><br>
                 <span style="font-family: 'Segoe Script', cursive; color: #222;">
@@ -306,15 +373,20 @@
                 Our Mission
             </span>
             <style>
-            @keyframes runningLight {
-                0% { background-position: 0% 50%; }
-                100% { background-position: 100% 50%; }
-            }
+                @keyframes runningLight {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    100% {
+                        background-position: 100% 50%;
+                    }
+                }
             </style>
-        
+
     </section>
     <section class="sdgs">
-       
+
         <div class="sdg-icons">
             <div class="sdg"
                 style="font-family: 'Segoe Script', cursive; color: #1a0033; font-size: 1.2em; background: #f3eaff; border-radius: 12px; padding: 12px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(26,0,51,0.08);">
@@ -357,7 +429,7 @@
             </div>
         </div>
         <div class="model">
-            <p>Details about the plantation model.</p>
+
         </div>
     </section>
     <section class="stakeholders">
@@ -379,10 +451,15 @@
             Our Stakeholders
         </h2>
         <style>
-        @keyframes runningLight {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }
+            @keyframes runningLight {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
         </style>
         <div class="stakeholder-logos">
             <div class="stakeholder-slider"
@@ -448,7 +525,32 @@
 
     </section>
     <footer>
-        <p>&copy; FIVE STAR SOCIAL WELFARE FOUNDATION</p>
+        <p style="
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.3em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff00cc, #ffcc00, #00ff99, #3333ff, #ff00cc);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: runningLight 3s linear infinite;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 0.5em 0;
+        ">&copy; 2024 Five Star Social Welfare Foundation. All rights reserved.</p>
+        <style>
+            @keyframes runningLight {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
+        </style>
     </footer>
     <script src="script.js"></script>
 </body>
