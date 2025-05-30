@@ -1,58 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>About Us | FIVE STAR SOCIAL WELFARE FOUNDATION</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Open Sans', Arial, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #222;
+            min-height: 100vh;
+            transition: background 1s;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            animation: bgchange 15s infinite alternate;
         }
+
+        @keyframes bgchange {
+            0% {
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+
+            20% {
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            }
+
+            40% {
+                background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            }
+
+            60% {
+                background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            }
+
+            80% {
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+
+            100% {
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            }
+        }
+
         header {
-            background: linear-gradient(90deg, #0f2027, #2c5364);
+            background: linear-gradient(90deg, #ff512f, #dd2476, #1fa2ff, #12d8fa, #a6ffcb);
+            background-size: 400% 400%;
+            animation: headerbg 10s ease-in-out infinite alternate;
             color: #fff;
             padding: 40px 0 20px 0;
             text-align: center;
-            box-shadow: 0 4px 16px rgba(44,83,100,0.15);
+            box-shadow: 0 4px 16px rgba(44, 83, 100, 0.15);
+            position: relative;
         }
+
+        @keyframes headerbg {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .home-btn {
+            position: absolute;
+            left: 32px;
+            top: 32px;
+            background: linear-gradient(90deg, #ff512f, #dd2476);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(44, 83, 100, 0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .home-btn:hover {
+            transform: scale(1.08) rotate(-2deg);
+            box-shadow: 0 6px 24px rgba(44, 83, 100, 0.18);
+            background: linear-gradient(90deg, #12d8fa, #a6ffcb);
+            color: #222;
+        }
+
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.8rem;
             margin: 0;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 12px #0002;
         }
+
         header p {
             font-size: 1.2rem;
             margin-top: 10px;
             color: #e0e0e0;
+            text-shadow: 1px 1px 8px #0002;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 40px auto;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(44,83,100,0.10);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(44, 83, 100, 0.15);
             padding: 40px 32px;
+            border: 3px solid #a1c4fd;
+            position: relative;
         }
+
         .about-section {
             text-align: center;
         }
+
         .about-section h2 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            color: #2c5364;
+            font-size: 2.2rem;
+            color: #dd2476;
             margin-bottom: 16px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 8px #fbc2eb44;
         }
+
         .about-section p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.7;
             color: #444;
         }
+
         .mission-vision {
             display: flex;
             flex-wrap: wrap;
@@ -60,81 +144,149 @@
             margin-top: 40px;
             justify-content: center;
         }
+
         .card {
             flex: 1 1 300px;
-            background: #f7fafc;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(44,83,100,0.07);
-            padding: 28px 20px;
+            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(44, 83, 100, 0.10);
+            padding: 32px 22px;
             margin: 0 8px;
             min-width: 260px;
+            border: 2px solid #ff512f33;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
+
+        .card:hover {
+            transform: scale(1.04) rotate(-1deg);
+            box-shadow: 0 8px 32px #dd247655;
+        }
+
         .card h3 {
-            color: #0f2027;
-            font-size: 1.3rem;
+            color: #ff512f;
+            font-size: 1.4rem;
             margin-bottom: 10px;
             font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 8px #fff4;
         }
+
         .card p {
             color: #333;
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
+
         .team-section {
-            margin-top: 48px;
+            margin-top: 56px;
             text-align: center;
         }
+
         .team-section h2 {
-            color: #2c5364;
+            color: #1fa2ff;
             font-family: 'Montserrat', sans-serif;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 8px #a6c1ee55;
         }
+
         .team-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 32px;
+            gap: 36px;
         }
+
         .team-member {
-            background: #e3eafc;
-            border-radius: 10px;
-            padding: 20px 16px;
-            width: 180px;
-            box-shadow: 0 2px 8px rgba(44,83,100,0.06);
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            border-radius: 16px;
+            padding: 24px 16px;
+            width: 190px;
+            box-shadow: 0 2px 12px rgba(44, 83, 100, 0.10);
+            border: 2px solid #12d8fa44;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
         }
+
+        .team-member:hover {
+            transform: scale(1.06) rotate(1deg);
+            box-shadow: 0 8px 32px #12d8fa55;
+        }
+
         .team-member img {
-            width: 70px;
-            height: 70px;
+            width: 74px;
+            height: 74px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 10px;
-            border: 3px solid #2c5364;
+            margin-bottom: 12px;
+            border: 3px solid #dd2476;
+            background: #fff;
+            box-shadow: 0 2px 8px #ff512f22;
         }
+
         .team-member h4 {
-            margin: 8px 0 4px 0;
-            font-size: 1.1rem;
-            color: #0f2027;
+            margin: 10px 0 4px 0;
+            font-size: 1.13rem;
+            color: #ff512f;
+            font-family: 'Montserrat', sans-serif;
         }
+
         .team-member p {
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             color: #444;
         }
+
+        /* Fancy animated border for team member */
+        .team-member::after {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 20px;
+            border: 2px dashed #ff512f;
+            opacity: 0.2;
+            pointer-events: none;
+            animation: borderpulse 2.5s infinite alternate;
+        }
+
+        @keyframes borderpulse {
+            0% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
         @media (max-width: 700px) {
             .container {
                 padding: 24px 8px;
             }
+
             .mission-vision {
                 flex-direction: column;
                 gap: 20px;
             }
+
             .team-list {
                 flex-direction: column;
                 gap: 20px;
             }
+
+            .home-btn {
+                left: 12px;
+                top: 12px;
+                padding: 8px 18px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
+        <a href="index.html" class="home-btn">🏠 Home</a>
         <h1>FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
         <p>Empowering Communities, Transforming Lives</p>
     </header>
@@ -142,20 +294,24 @@
         <section class="about-section">
             <h2>About Us</h2>
             <p>
-                FIVE STAR SOCIAL WELFARE FOUNDATION is a non-profit organization dedicated to uplifting underprivileged communities through education, healthcare, and social empowerment initiatives. Since our inception, we have been committed to creating sustainable change and fostering hope for a brighter future.
+                FIVE STAR SOCIAL WELFARE FOUNDATION is a non-profit organization dedicated to uplifting underprivileged
+                communities through education, healthcare, and social empowerment initiatives. Since our inception, we
+                have been committed to creating sustainable change and fostering hope for a brighter future.
             </p>
         </section>
         <div class="mission-vision">
             <div class="card">
                 <h3>Our Mission</h3>
                 <p>
-                    To serve humanity by providing access to quality education, healthcare, and essential resources, enabling individuals to lead dignified and self-reliant lives.
+                    To serve humanity by providing access to quality education, healthcare, and essential resources,
+                    enabling individuals to lead dignified and self-reliant lives.
                 </p>
             </div>
             <div class="card">
                 <h3>Our Vision</h3>
                 <p>
-                    To build a compassionate society where every person has the opportunity to realize their full potential and contribute positively to the world.
+                    To build a compassionate society where every person has the opportunity to realize their full
+                    potential and contribute positively to the world.
                 </p>
             </div>
         </div>
@@ -163,22 +319,22 @@
             <h2>Our Team</h2>
             <div class="team-list">
                 <div class="team-member">
-                    <img src="" alt="Founder">
-                    <h4>kishore kumar pal</h4>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Founder">
+                    <h4>Kishore Kumar Pal</h4>
                     <p>Founder & President</p>
                 </div>
                 <div class="team-member">
-                    <img src="" alt="Director">
-                    <h4>sisir kumar pal</h4>
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Director">
+                    <h4>Sisir Kumar Pal</h4>
                     <p>Director</p>
                 </div>
                 <div class="team-member">
-                    <img src="" alt="Coordinator">
-                    <h4>h</h4>
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Coordinator">
+                    <h4>H</h4>
                     <p>Program Coordinator</p>
                 </div>
                 <div class="team-member">
-                    <img src="" alt="Volunteer Lead">
+                    <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Volunteer Lead">
                     <h4>S</h4>
                     <p>Volunteer Lead</p>
                 </div>
@@ -186,4 +342,5 @@
         </section>
     </div>
 </body>
+
 </html>
