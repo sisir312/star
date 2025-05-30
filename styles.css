@@ -12,7 +12,7 @@ header {
 
     background-image: url('n1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: cover;
     min-height: 300px;
     width: 100%;
     /* Fancy Five Star NGO logo */
