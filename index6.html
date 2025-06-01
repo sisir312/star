@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate - FIVE STAR SOCIAL WELFARE FOUNDATION, ODISHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 650px;
+            margin: 48px auto;
+            padding: 36px 28px;
+            background: linear-gradient(120deg, #ffffff 60%, #e1bee7 100%);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #ffd600 60%, transparent 100%);
+            opacity: 0.25;
+            z-index: 0;
+        }
+        .container::after {
+            content: "";
+            position: absolute;
+            bottom: -60px;
+            left: -60px;
+            width: 160px;
+            height: 160px;
+            background: radial-gradient(circle, #00e676 60%, transparent 100%);
+            opacity: 0.18;
+            z-index: 0;
+        }
+        h1 {
+            background: linear-gradient(90deg, #ff9800, #8e24aa, #00bcd4);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 2.3em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            z-index: 1;
+            position: relative;
+        }
+        h2 {
+            color: #388e3c;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 26px;
+            font-size: 1.25em;
+            font-weight: 600;
+            z-index: 1;
+            position: relative;
+        }
+        p {
+            color: #333;
+            line-height: 1.7;
+            text-align: center;
+            font-size: 1.08em;
+            z-index: 1;
+            position: relative;
+        }
+        .bank-details {
+            background: linear-gradient(90deg, #e1bee7 0%, #b2dfdb 100%);
+            padding: 22px 24px;
+            border-radius: 12px;
+            margin: 32px 0 24px 0;
+            font-size: 1.13em;
+            box-shadow: 0 2px 10px rgba(156,39,176,0.08);
+            border: 2px solid #ffb300;
+            z-index: 1;
+            position: relative;
+        }
+        .bank-details strong {
+            color: #6a1b9a;
+            font-size: 1.08em;
+        }
+        .bank-details span {
+            display: block;
+            margin: 4px 0;
+        }
+        .donate-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(90deg, #ff9800 0%, #00bcd4 100%);
+            color: #fff;
+            border: none;
+            padding: 16px 0;
+            font-size: 1.18em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 18px;
+            box-shadow: 0 4px 16px rgba(255,152,0,0.12);
+            transition: background 0.2s, transform 0.2s;
+            z-index: 1;
+            position: relative;
+        }
+        .donate-btn:hover {
+            background: linear-gradient(90deg, #00bcd4 0%, #ff9800 100%);
+            transform: scale(1.03);
+        }
+        .email-link {
+            color: #d84315;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .email-link:hover {
+            color: #6a1b9a;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 4px;
+            }
+            h1 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FIVE STAR SOCIAL WELFARE FOUNDATION</h1>
+        <h2>Empowering Tribal and Low Caste Communities in Odisha</h2>
+        <p>
+            <span style="font-size:1.15em; color:#ff9800; font-weight:bold;">Support Change. Empower Lives.</span><br>
+            Your generous donation helps us provide education, healthcare, and livelihood opportunities to marginalized communities in Odisha. Together, we can make a lasting impact!
+        </p>
+        <div class="bank-details">
+            <strong>Bank Details for Donation:</strong>
+            <span>Account Name: <b>FIVE STAR SOCIAL WELFARE FOUNDATION</b></span>
+            <span>Bank: Punjab National Bank</span>
+            <span>Branch: Jajpur Road</span>
+            <span>Account Number: <b>1705200100014153</b></span>
+            <span>IFSC Code: <b>PUNB0170520</b></span>
+        </div>
+        <p>
+            After making your donation, please email your transaction details to
+            <a class="email-link" href="mailto:fivestarwelfaregroup@gmail.com">fivestarwelfaregroup@gmail.com</a>
+            for receipt and acknowledgment.
+        </p>
+        <button class="donate-btn" onclick="window.open('https://www.pnbindia.in/', '_blank')">
+            Donate Now via Punjab National Bank
+        </button>
+    </div>
+</body>
+</html>
