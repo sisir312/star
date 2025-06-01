@@ -14,7 +14,50 @@
     <header>
         <div style="display: flex; justify-content: space-between; align-items: center; position: relative;">
             <h1 class="gradient-text blinking-text pop-effect special-effect">
-                FIVE STAR SOCIAL WELFARE FOUNDATION
+                <span style="display: flex; flex-direction: column; align-items: center;">
+                    <span class="blinking-stars" style="margin-bottom: 8px;">
+                        <span class="star" style="font-size: 2em; color: #ffcc00; text-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00;">&#9733;</span>
+                        <span class="star" style="font-size: 2em; color: #ffcc00; text-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00;">&#9733;</span>
+                        <span class="star" style="font-size: 2em; color: #ffcc00; text-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00;">&#9733;</span>
+                        <span class="star" style="font-size: 2em; color: #ffcc00; text-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00;">&#9733;</span>
+                        <span class="star" style="font-size: 2em; color: #ffcc00; text-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00;">&#9733;</span>
+                    </span>
+                    FIVE STAR SOCIAL WELFARE FOUNDATION
+                </span>
+                <style>
+                    .blinking-stars .star {
+                        animation: blinkStar 1.2s infinite alternate;
+                    }
+                    .blinking-stars .star:nth-child(2) {
+                        animation-delay: 0.2s;
+                    }
+                    .blinking-stars .star:nth-child(3) {
+                        animation-delay: 0.4s;
+                    }
+                    .blinking-stars .star:nth-child(4) {
+                        animation-delay: 0.6s;
+                    }
+                    .blinking-stars .star:nth-child(5) {
+                        animation-delay: 0.8s;
+                    }
+                    @keyframes blinkStar {
+                        0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px #ffcc00); }
+                        50% { opacity: 0.4; filter: drop-shadow(0 0 16px #fff700); }
+                    }
+                </style></span>
+                <style>
+                    .gradient-text,
+                    .blinking-text,
+                    .pop-effect,
+                    .special-effect {
+                        animation: none !important;
+                        
+                    }
+                    .special-effect::after {
+                        animation: none !important;
+                        opacity: 0 !important;
+                    }
+                </style>
             </h1>
             <style>
                 .pop-effect {
